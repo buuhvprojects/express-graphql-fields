@@ -1,0 +1,71 @@
+{
+  "name": "express-graphql-fields",
+  "version": "1.0.0",
+  "description": "Used to integrate with the express-graphql library. Use it when implementing schemas",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project ./",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint ./lib --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint ./lib --ext .js,.jsx,.ts,.tsx --fix",
+    "prepare": "husky install",
+    "changelog": "standard-version && git push --follow-tags origin develop"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "git pull"
+    }
+  },
+  "lint-staged": {
+    "**/*{.js,.jsx,.ts,.tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buuhvprojects/express-graphql-fields.git"
+  },
+  "keywords": [
+    "graphql",
+    "fields",
+    "graphql",
+    "schema",
+    "fields",
+    "express",
+    "graphql",
+    "express"
+  ],
+  "author": "BuuhV Projects",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buuhvprojects/express-graphql-fields/issues"
+  },
+  "homepage": "https://github.com/buuhvprojects/express-graphql-fields#readme",
+  "dependencies": {
+    "graphql-fields": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/graphql-fields": "^1.3.4",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.9.0",
+    "eslint-plugin-unused-imports": "^1.1.4",
+    "husky": "^8.0.1",
+    "jest": "^29.1.2",
+    "reflect-metadata": "^0.1.13",
+    "standard-version": "^9.3.2",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0",
+    "tsc-watch": "^4.2.9",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.4.4",
+    "typescript-eslint": "^0.0.1-alpha.0"
+  }
+}
